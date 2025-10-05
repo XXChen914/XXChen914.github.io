@@ -1,1 +1,50 @@
-Hello
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PuzzleRealm — Login</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-title">
+      <img class="nav-logo" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect rx="6" width="32" height="32" fill="%231fb6ff"/></svg>' alt="logo">
+      <span>PuzzleRealm</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../selection/index.html">Selection</a></li>
+      <li><a href="../hard/index.html">Hard Game</a></li>
+      <li><a href="../easy/index.html">Easy Game</a></li>
+      <li><a href="../rules/index.html">Rules</a></li>
+      <li><a href="../highscores/index.html">High Scores</a></li>
+      <li><a href="../login/index.html" class="active">Login</a></li>
+      <li><a href="../register/index.html">Register</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Login</h1>
+      <span class="small">Enter your credentials (mock)</span>
+    </header>
+
+    <section>
+      <form class="form" method="post" action="#">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" placeholder="username" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="password" required>
+
+        <div class="submit-row">
+          <button class="btn" type="submit">Login</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
+
