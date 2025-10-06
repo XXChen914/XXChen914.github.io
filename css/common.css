@@ -78,7 +78,7 @@ a {
 }
 
 /* ====== Responsive Navbar Shrink ====== */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .navbar {
     padding: 0.75rem 1.5rem;
   }
@@ -97,7 +97,7 @@ a {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .navbar {
     flex-direction: column;
     justify-content: center;
@@ -185,32 +185,6 @@ input {
 input:focus {
   outline: none;
   border-color: #2ec4b6;
-}
-
-/* ====== Tables (for High Scores) ====== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1.5rem;
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-th,
-td {
-  border: 1px solid #00b4d8;
-  padding: 0.6rem;
-  text-align: center;
-}
-
-th {
-  background-color: #2ec4b6;
-  color: white;
-}
-
-tr:nth-child(even) {
-  background-color: #e0f7fa;
 }
 
 /* ====== Game grids ====== */
