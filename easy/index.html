@@ -12,7 +12,11 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="nav-title">
-        <img src="../images/sudoku-icon.svg" alt="Lucy's Sudoku logo" class="nav-logo" />
+        <img
+          src="../images/sudoku-icon.svg"
+          alt="Lucy's Sudoku logo"
+          class="nav-logo"
+        />
         <span>Lucy's Sudoku</span>
       </div>
       <ul class="nav-links">
@@ -38,49 +42,281 @@
           <div class="game-container">
             <div class="timer">Time: 08:15</div>
             <!-- 6x6 Sudoku Grid -->
-            <div class="sudoku-grid size-6" role="grid" aria-label="6x6 Sudoku Board">
+            <div
+              class="sudoku-grid size-6"
+              role="grid"
+              aria-label="6x6 Sudoku Board"
+            >
               <!-- Each input cell -->
-              <input type="number" class="sudoku-cell" min="1" max="6" value="3" aria-label="Cell 1" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 2" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 3" />
-              <input type="number" class="sudoku-cell" min="1" max="6" value="5" aria-label="Cell 4" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 5" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 6" />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                value="3"
+                aria-label="Cell 1"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 2"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 3"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                value="5"
+                aria-label="Cell 4"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 5"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 6"
+              />
 
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 7" />
-              <input type="number" class="sudoku-cell" min="1" max="6" value="5" aria-label="Cell 8" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 9" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 10" />
-              <input type="number" class="sudoku-cell" min="1" max="6" value="3" aria-label="Cell 11" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 12" />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 7"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                value="5"
+                aria-label="Cell 8"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 9"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 10"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                value="3"
+                aria-label="Cell 11"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 12"
+              />
 
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 13" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 14" />
-              <input type="number" class="sudoku-cell" min="1" max="6" value="2" aria-label="Cell 15" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 16" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 17" />
-              <input type="number" class="sudoku-cell" min="1" max="6" value="4" aria-label="Cell 18" />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 13"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 14"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                value="2"
+                aria-label="Cell 15"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 16"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 17"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                value="4"
+                aria-label="Cell 18"
+              />
 
-              <input type="number" class="sudoku-cell" min="1" max="6" value="4" aria-label="Cell 19" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 20" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 21" />
-              <input type="number" class="sudoku-cell" min="1" max="6" value="6" aria-label="Cell 22" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 23" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 24" />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                value="4"
+                aria-label="Cell 19"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 20"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 21"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                value="6"
+                aria-label="Cell 22"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 23"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 24"
+              />
 
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 25" />
-              <input type="number" class="sudoku-cell" min="1" max="6" value="1" aria-label="Cell 26" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 27" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 28" />
-              <input type="number" class="sudoku-cell" min="1" max="6" value="5" aria-label="Cell 29" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 30" />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 25"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                value="1"
+                aria-label="Cell 26"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 27"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 28"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                value="5"
+                aria-label="Cell 29"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 30"
+              />
 
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 31" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 32" />
-              <input type="number" class="sudoku-cell" min="1" max="6" value="6" aria-label="Cell 33" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 34" />
-              <input type="number" class="sudoku-cell" min="1" max="6" aria-label="Cell 35" />
-              <input type="number" class="sudoku-cell" min="1" max="6" value="2" aria-label="Cell 36" />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 31"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 32"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                value="6"
+                aria-label="Cell 33"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 34"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                aria-label="Cell 35"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="6"
+                value="2"
+                aria-label="Cell 36"
+              />
             </div>
 
             <div class="game-controls">
