@@ -3,8 +3,8 @@
     padding: 3rem 1rem;
 }
 
-.welcome-section h1 {
-    font-size: 3.5rem;        /* Bigger welcome heading */
+.welcome-section:first-child {
+    font-size: 3.5rem;        
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
@@ -17,9 +17,9 @@
 }
 
 .start-btn {
-    font-size: 1.5rem;        /* Bigger start button */
+    font-size: 1.5rem;        
     font-weight: 600;
-    padding: 1rem 3rem;       /* Bigger padding for larger button */
+    padding: 1rem 3rem;       
     background: #fb6f92;
     color: #fff;
     border: none;
@@ -41,8 +41,8 @@
 
 /* Responsive: Adjust sizes on smaller screens */
 @media (max-width: 768px) {
-    .welcome-section h1 {
-        font-size: 2.5rem;    /* Slightly smaller on tablet */
+    .welcome-section:first-child {
+        font-size: 2.5rem;    
     }
     
     .start-btn {
@@ -53,7 +53,7 @@
 
 @media (max-width: 480px) {
     .welcome-section h1 {
-        font-size: 2rem;      /* Smaller on mobile */
+        font-size: 2rem;     
     }
     
     .start-btn {
