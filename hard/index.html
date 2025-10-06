@@ -2,18 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>PuzzleRealm — Hard Game</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lucy's Sudoku — Hard Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="hard.css" />
   </head>
+
   <body>
+    <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="nav-title">
-        <img src="../images/sudoku-icon.svg" alt="Logo" class="nav-logo" />
+        <img
+          src="../images/sudoku-icon.svg"
+          alt="Lucy's Sudoku logo"
+          class="nav-logo"
+        />
         <span>Lucy's Sudoku</span>
       </div>
       <ul class="nav-links">
-        <li><a href="/"">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="/selection/">Selection</a></li>
         <li><a href="/hard/" class="active">Hard Game</a></li>
         <li><a href="/easy/">Easy Game</a></li>
@@ -27,622 +34,639 @@
     <main class="container">
       <header class="page-header">
         <h1>Hard Game — 9×9</h1>
-        <span class="small">Game: Midnight Sudoku (mock)</span>
+        <p class="subtitle">Challenge yourself with the full Sudoku grid!</p>
       </header>
 
-      <section>
-        <div style="display: flex; flex-direction: column; gap: 1rem">
-          <div class="controls">
-            <div class="timer">⏱ 12:34</div>
-            <!-- fake timer -->
-            <div style="flex: 1"></div>
-            <button class="btn">Check (mock)</button>
-            <button class="btn">Hint (mock)</button>
-          </div>
+      <section id="hard" class="game-section">
+        <div class="content-card">
+          <div class="game-container">
+            <div class="timer">Time: 00:00</div>
+            <!-- 9x9 Sudoku Grid -->
+            <div
+              class="sudoku-grid size-9"
+              role="grid"
+              aria-label="9x9 Sudoku Board"
+            >
+              <!-- Row 1 -->
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="9"
+                value="5"
+                aria-label="Cell 1"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="9"
+                aria-label="Cell 2"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="9"
+                value="8"
+                aria-label="Cell 3"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="9"
+                aria-label="Cell 4"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="9"
+                value="7"
+                aria-label="Cell 5"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="9"
+                aria-label="Cell 6"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="9"
+                aria-label="Cell 7"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="9"
+                value="3"
+                aria-label="Cell 8"
+              />
+              <input
+                type="number"
+                class="sudoku-cell"
+                min="1"
+                max="9"
+                aria-label="Cell 9"
+              />
 
-          <div
-            style="
-              display: flex;
-              flex-wrap: wrap;
-              gap: 1rem;
-              align-items: flex-start;
-            "
-          >
-            <div class="board board-9" aria-label="9x9 board">
-              <!-- 81 inputs -->
-              <!-- use input type number (min,max) to allow only 1-9 -->
-              <!-- Row-major fill -->
-              <!-- For brevity: generating 81 <input> elements manually -->
-              <!-- You can copy/paste and adjust as needed -->
-              <!-- First 9 -->
-              <input
-                inputmode="numeric"
-                type="number"
-                min="1"
-                max="9"
-                pattern="[1-9]"
-              />
-              <input
-                inputmode="numeric"
-                type="number"
-                min="1"
-                max="9"
-                pattern="[1-9]"
-              />
-              <input
-                inputmode="numeric"
-                type="number"
-                min="1"
-                max="9"
-                pattern="[1-9]"
-              />
-              <input
-                inputmode="numeric"
-                type="number"
-                min="1"
-                max="9"
-                pattern="[1-9]"
-              />
-              <input
-                inputmode="numeric"
-                type="number"
-                min="1"
-                max="9"
-                pattern="[1-9]"
-              />
-              <input
-                inputmode="numeric"
-                type="number"
-                min="1"
-                max="9"
-                pattern="[1-9]"
-              />
-              <input
-                inputmode="numeric"
-                type="number"
-                min="1"
-                max="9"
-                pattern="[1-9]"
-              />
-              <input
-                inputmode="numeric"
-                type="number"
-                min="1"
-                max="9"
-                pattern="[1-9]"
-              />
-              <input
-                inputmode="numeric"
-                type="number"
-                min="1"
-                max="9"
-                pattern="[1-9]"
-              />
-              <!-- Repeat 8 more rows (total 81 inputs). For brevity here, rows are repeated -->
               <!-- Row 2 -->
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="6"
+                aria-label="Cell 10"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 11"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 12"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="1"
+                aria-label="Cell 13"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 14"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 15"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="9"
+                aria-label="Cell 16"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 17"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="2"
+                aria-label="Cell 18"
               />
+
               <!-- Row 3 -->
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 19"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="9"
+                aria-label="Cell 20"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 21"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 22"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="4"
+                aria-label="Cell 23"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 24"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="1"
+                aria-label="Cell 25"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 26"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 27"
               />
               <!-- Row 4 -->
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="8"
+                aria-label="Cell 28"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 29"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="3"
+                aria-label="Cell 30"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 31"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="2"
+                aria-label="Cell 32"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 33"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 34"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 35"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="6"
+                aria-label="Cell 36"
               />
+
               <!-- Row 5 -->
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 37"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 38"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="9"
+                aria-label="Cell 39"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 40"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="1"
+                aria-label="Cell 41"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 42"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="5"
+                aria-label="Cell 43"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 44"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 45"
               />
+
               <!-- Row 6 -->
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 46"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="4"
+                aria-label="Cell 47"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 48"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="9"
+                aria-label="Cell 49"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 50"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 51"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 52"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="7"
+                aria-label="Cell 53"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 54"
               />
+
               <!-- Row 7 -->
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 55"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 56"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="7"
+                aria-label="Cell 57"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 58"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 59"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="3"
+                aria-label="Cell 60"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 61"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 62"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="9"
+                aria-label="Cell 63"
               />
+
               <!-- Row 8 -->
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 64"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="8"
+                aria-label="Cell 65"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 66"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 67"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="9"
+                aria-label="Cell 68"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 69"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="2"
+                aria-label="Cell 70"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 71"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 72"
               />
+
               <!-- Row 9 -->
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="2"
+                aria-label="Cell 73"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 74"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 75"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="8"
+                aria-label="Cell 76"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 77"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 78"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 79"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                value="4"
+                aria-label="Cell 80"
               />
               <input
-                inputmode="numeric"
                 type="number"
+                class="sudoku-cell"
                 min="1"
                 max="9"
-                pattern="[1-9]"
+                aria-label="Cell 81"
               />
             </div>
 
-            <aside style="min-width: 240px">
-              <div class="hero" style="padding: 0.8rem">
-                <h3>Game Info</h3>
-                <p class="small">Difficulty: Hard</p>
-                <p class="small">Author: A. Nightshade</p>
-                <div style="margin-top: 0.6rem">
-                  <button class="btn">New Puzzle</button>
-                </div>
-              </div>
-            </aside>
+            <div class="game-controls">
+              <button class="cta-button">Check Solution</button>
+              <button class="cta-button">Reset</button>
+              <button class="cta-button">Hint</button>
+            </div>
           </div>
         </div>
       </section>
