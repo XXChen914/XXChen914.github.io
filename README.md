@@ -1,2 +1,18 @@
-# Welcome to [Lucy's Sudoku](https://xxchen914.github.io/login/)
-Check the demo video here
+# 🧩 Welcome to [Lucy's Sudoku](https://xxchen914.github.io/login/)!
+Video Walkthrough: [YouTube Demo]()
+🎮 Website Write-Up — Lucy’s Sudoku
+1. What was the most challenging piece of this assignment?
+The most challenging part of this assignment was creating a fully responsive design that worked well on both desktop and mobile screens without using any JavaScript. Getting the Sudoku grid, navbar, and layout to resize gracefully required a lot of experimentation with CSS Grid and Flexbox. I also had to make sure that the navigation bar stayed fixed while not overlapping the main content, which took several iterations of position adjustments and spacing refinements. Overall, working only with HTML and CSS was both a limitation and a great learning experience — I had to rely on structure and styling instead of logic.
+2. What decisions did you make when you made your site mobile friendly?
+When making the site mobile friendly, I prioritized readability and usability. I used CSS media queries to detect smaller screen sizes and adjusted the grid cell sizes, font sizes, and padding to prevent horizontal scrolling. On mobile, I considered moving the navigation bar to the bottom for better thumb accessibility, ensuring it didn’t block the game content. I also used flexible units (%, rem, and auto) instead of fixed pixels where possible, so elements would scale naturally on different screen sizes. Each page was tested in Chrome’s iPhone 12 Pro simulator to ensure it displayed properly.
+3. What did you take into account when you developed the design of your website? Is there anything that you’re particularly proud of?
+For the design, I wanted a clean, modern, and approachable feel — similar to real mobile puzzle apps. I used a light color palette with pink accents (#fb6f92) to create a friendly atmosphere while maintaining readability. I also ensured consistent spacing and typography using flexbox and grid for alignment and layout control.
+I’m particularly proud of the Sudoku grid design and the fixed navbar that adapts nicely between desktop and mobile views. The layout feels intuitive, and each page maintains a consistent structure, which improves the overall user experience. The 9×9 and 6×6 Sudoku boards were fully styled with accessible input fields and clear subgrid borders, even without JavaScript.
+4. Given more time or resources, what additional features would you add to your site in the future?
+If I had more time, I would implement game logic using JavaScript — such as validating user input, generating random Sudoku puzzles, and tracking completion times. I would also add animations for button interactions and transitions between pages to make the experience smoother. Another feature I’d like to include is a scoreboard that dynamically updates and stores user data using local storage or a backend database. Finally, I’d like to enhance accessibility by including keyboard navigation and ARIA labels for screen readers.
+5. How many hours did you spend on this assignment?
+I spent approximately 10–12 hours on this assignment, including designing the layout, writing responsive CSS, debugging styling issues, and refining each page for consistency and mobile compatibility.
+6. (Optional) If you made any assumptions about this assignment, what are they?
+I assumed that each page only needed to be static and linked via the navbar, without requiring functional interactivity. I also assumed the fake data (like usernames and scores) could be hardcoded and that using placeholder links for GitHub, email, and LinkedIn would be acceptable for privacy reasons.
+7. (Optional) If you used code or design from somewhere online, please mention it here.
+I used general layout patterns and responsive design techniques inspired by MDN Web Docs and CSS-Tricks. For icons and styling ideas, I referenced open SVG assets from Flaticon. The fonts used were imported from Google Fonts for a more polished appearance.
