@@ -1,3 +1,4 @@
+/* ====== Global ====== */
 body {
   margin: 0;
   font-family: "Poppins", Arial, sans-serif;
@@ -76,28 +77,6 @@ a {
   font-weight: 600;
 }
 
-
-/* ====== Responsive Navbar Shrink ====== */
-@media (max-width: 900px) {
-  .navbar {
-    padding: 0.75rem 1.5rem;
-  }
-
-  .nav-title {
-    font-size: 1.2rem;
-  }
-
-  .nav-links {
-    gap: 0.75rem;
-  }
-
-  .nav-links a {
-    padding: 5px 8px;
-    font-size: 0.95rem;
-  }
-}
-
-
 /* ====== Responsive Navbar Shrink ====== */
 @media (max-width: 900px) {
   .navbar {
@@ -163,22 +142,27 @@ main {
 }
 
 /* ====== Buttons ====== */
-button,
 .btn {
-  background-color: #2ec4b6; /* green accent */
-  color: white;
+  font-size: 0.9rem; 
+  font-weight: 600;
+  padding: 0.6rem 1.1rem;
+  background: #fb6f92;
+  color: #fff;
   border: none;
-  padding: 0.7rem 1.2rem;
-  font-size: 1rem;
-  border-radius: 8px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(251, 111, 146, 0.3);
 }
 
-button:hover,
 .btn:hover {
-  background-color: #249a8e;
+  background: #ff5a82;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(251, 111, 146, 0.4);
+}
+
+.btn:active {
+  transform: translateY(0);
 }
 
 /* ====== Forms ====== */
@@ -307,15 +291,4 @@ tr:nth-child(even) {
   td {
     font-size: 0.9rem;
   }
-}
-
-/* ====== Footer (optional) ====== */
-footer {
-  text-align: center;
-  padding: 1rem;
-  color: #000;
-  background-color: rgba(255, 255, 255, 0.6);
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
