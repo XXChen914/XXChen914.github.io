@@ -1,53 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>PuzzleRealm — Register</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="../css/common.css">
-</head>
-<body>
-  <nav class="navbar">
-    <div class="nav-title">
-      <img class="nav-logo" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect rx="6" width="32" height="32" fill="%231fb6ff"/></svg>' alt="logo">
-      <span>PuzzleRealm</span>
-    </div>
+  <head>
+    <meta charset="utf-8" />
+    <title>PuzzleRealm — Register</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="../css/common.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-title">
+        <img src="../images/sudoku-icon.svg" alt="Logo" class="nav-logo" />
+        <span>Lucy's Sudoku</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/selection/">Selection</a></li>
+        <li><a href="/hard/">Hard Game</a></li>
+        <li><a href="/easy/">Easy Game</a></li>
+        <li><a href="/rules/">Rules</a></li>
+        <li><a href="/scores/">High Scores</a></li>
+        <li><a href="/login/">Login</a></li>
+        <li><a href="/register/" class="active">Register</a></li>
+      </ul>
+    </nav>
 
-    <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../selection/index.html">Selection</a></li>
-      <li><a href="../hard/index.html">Hard Game</a></li>
-      <li><a href="../easy/index.html">Easy Game</a></li>
-      <li><a href="../rules/index.html">Rules</a></li>
-      <li><a href="../highscores/index.html">High Scores</a></li>
-      <li><a href="../login/index.html">Login</a></li>
-      <li><a href="../index.html" class="active">Register</a></li>
-    </ul>
-  </nav>
+    <main class="container">
+      <header class="page-header">
+        <h1>Register</h1>
+        <span class="small">Create an account (mock)</span>
+      </header>
 
-  <main class="container">
-    <header class="page-header">
-      <h1>Register</h1>
-      <span class="small">Create an account (mock)</span>
-    </header>
+      <section>
+        <form class="form" method="post" action="#">
+          <label for="reg-username">Username</label>
+          <input
+            id="reg-username"
+            name="username"
+            type="text"
+            placeholder="username"
+            required
+          />
 
-    <section>
-      <form class="form" method="post" action="#">
-        <label for="reg-username">Username</label>
-        <input id="reg-username" name="username" type="text" placeholder="username" required>
+          <label for="reg-password">Password</label>
+          <input
+            id="reg-password"
+            name="password"
+            type="password"
+            placeholder="password"
+            required
+          />
 
-        <label for="reg-password">Password</label>
-        <input id="reg-password" name="password" type="password" placeholder="password" required>
+          <label for="reg-password-verify">Verify Password</label>
+          <input
+            id="reg-password-verify"
+            name="password-verify"
+            type="password"
+            placeholder="retype password"
+            required
+          />
 
-        <label for="reg-password-verify">Verify Password</label>
-        <input id="reg-password-verify" name="password-verify" type="password" placeholder="retype password" required>
-
-        <div class="submit-row">
-          <button class="btn" type="submit">Register</button>
-        </div>
-      </form>
-    </section>
-  </main>
-</body>
+          <div class="submit-row">
+            <button class="btn" type="submit">Register</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
 </html>
-

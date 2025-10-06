@@ -8,46 +8,29 @@
   </head>
   <body>
     <nav class="navbar">
-      <div class="nav-title">Lucy's Sudoku</div>
+      <div class="nav-title">
+        <img src="./images/sudoku-icon.svg" alt="Logo" class="nav-logo" />
+        <span>Lucy's Sudoku</span>
+      </div>
       <ul class="nav-links">
         <li><a href="/" class="active">Home</a></li>
-        <li><a href="/selection">Selection</a></li>
-        <li><a href="/hard">Hard Game</a></li>
-        <li><a href="/easy">Easy Game</a></li>
-        <li><a href="/rules">Rules</a></li>
-        <li><a href="/highscores">High Scores</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/register">Register</a></li>
+        <li><a href="/selection/">Selection</a></li>
+        <li><a href="/hard/">Hard Game</a></li>
+        <li><a href="/easy/">Easy Game</a></li>
+        <li><a href="/rules/">Rules</a></li>
+        <li><a href="/scores/">High Scores</a></li>
+        <li><a href="/login/">Login</a></li>
+        <li><a href="/register/">Register</a></li>
       </ul>
     </nav>
 
-    <main class="container">
-      <header class="page-header">
-        <h1>Home Page</h1>
-        <span class="small">Welcome to PuzzleRealm — wireframe home</span>
-      </header>
-
-      <section class="hero">
-        <h2>Welcome to PuzzleRealm</h2>
-        <p>
-          Play grid puzzles of every size! This is a mock home page with artwork
-          and a short blurb.
-        </p>
-        <p>
-          <img
-            src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="720" height="160"><rect width="720" height="160" rx="12" fill="%230f1724"/><text x="50%" y="55%" font-size="28" text-anchor="middle" fill="%23fff">PuzzleRealm — Grid Games</text></svg>'
-            alt="hero"
-            style="width: 100%; max-width: 720px; border-radius: 10px"
-          />
-        </p>
-      </section>
-
-      <section style="margin-top: 1rem">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="selection.html">Choose a game</a></li>
-          <li><a href="highscores.html">See top players</a></li>
-        </ul>
+    <main class="home-container">
+      <section class="welcome-section">
+        <h1>Welcome to Lucy's Sudoku</h1>
+        <p>Sharpen your mind, relax, and enjoy the puzzle challenge.</p>
+        <form action="/login/">
+          <button type="submit" class="start-btn">Start</button>
+        </form>
       </section>
     </main>
   </body>

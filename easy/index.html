@@ -1,96 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>PuzzleRealm — Easy Game</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="../css/common.css">
-</head>
-<body>
-  <nav class="navbar">
-    <div class="nav-title">
-      <img class="nav-logo" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect rx="6" width="32" height="32" fill="%231fb6ff"/></svg>' alt="logo">
-      <span>PuzzleRealm</span>
-    </div>
-
-    <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../selection/index.html">Selection</a></li>
-      <li><a href="../hard/index.html">Hard Game</a></li>
-      <li><a href="index.html" class="active">Easy Game</a></li>
-      <li><a href="../rules/index.html">Rules</a></li>
-      <li><a href="../highscores/index.html">High Scores</a></li>
-      <li><a href="../login.html">Login</a></li>
-      <li><a href="../register.html">Register</a></li>
-    </ul>
-  </nav>
-
-  <main class="container">
-    <header class="page-header">
-      <h1>Easy Game — 6×6</h1>
-      <span class="small">Pocket Puzzles (mock)</span>
-    </header>
-
-    <section style="display:flex;gap:1rem;flex-wrap:wrap;">
-      <div class="board board-6" aria-label="6x6 board">
-        <!-- 36 inputs -->
-        <!-- 6 per row * 6 rows -->
-        <!-- Row 1 -->
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <!-- Row 2 -->
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <!-- Row 3 -->
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <!-- Row 4 -->
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <!-- Row 5 -->
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <!-- Row 6 -->
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
-        <input inputmode="numeric" type="number" min="1" max="6" />
+  <head>
+    <meta charset="utf-8" />
+    <title>PuzzleRealm — Easy Game</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="../css/common.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-title">
+        <img src="../images/sudoku-icon.svg" alt="Logo" class="nav-logo" />
+        <span>Lucy's Sudoku</span>
       </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/selection/">Selection</a></li>
+        <li><a href="/hard/">Hard Game</a></li>
+        <li><a href="/easy/" class="active">Easy Game</a></li>
+        <li><a href="/rules/">Rules</a></li>
+        <li><a href="/scores/">High Scores</a></li>
+        <li><a href="/login/">Login</a></li>
+        <li><a href="/register/">Register</a></li>
+      </ul>
+    </nav>
 
-      <div style="flex:1;min-width:200px;">
-        <div class="hero">
-          <h3>Game Info</h3>
-          <p class="small">Difficulty: Easy</p>
-          <p class="small">Author: L. J. Carter</p>
-          <div style="margin-top:0.6rem;">
-            <button class="btn">New Puzzle</button>
+    <main class="container">
+      <header class="page-header">
+        <h1>Easy Game — 6×6</h1>
+        <span class="small">Pocket Puzzles (mock)</span>
+      </header>
+
+      <section style="display: flex; gap: 1rem; flex-wrap: wrap">
+        <div class="board board-6" aria-label="6x6 board">
+          <!-- 36 inputs -->
+          <!-- 6 per row * 6 rows -->
+          <!-- Row 1 -->
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <!-- Row 2 -->
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <!-- Row 3 -->
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <!-- Row 4 -->
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <!-- Row 5 -->
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <!-- Row 6 -->
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+          <input inputmode="numeric" type="number" min="1" max="6" />
+        </div>
+
+        <div style="flex: 1; min-width: 200px">
+          <div class="hero">
+            <h3>Game Info</h3>
+            <p class="small">Difficulty: Easy</p>
+            <p class="small">Author: L. J. Carter</p>
+            <div style="margin-top: 0.6rem">
+              <button class="btn">New Puzzle</button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-</body>
+      </section>
+    </main>
+  </body>
 </html>
-

@@ -1,288 +1,321 @@
-/* css/style.css */
-
-/* ---------- global ---------- */
-:root{
-  --nav-height: 64px;
-  --nav-bg: #0f1724;
-  --accent: #1fb6ff;
-  --muted: #8b9aa7;
-  --page-padding: 1rem;
-  --max-width: 1000px;
-  --board-gap: 2px;
-}
-
-*{box-sizing: border-box;}
-html,body{height:100%;}
-body{
+body {
   margin: 0;
-  font-family: "Segoe UI", Roboto, Arial, sans-serif; /* font-family used */
-  color: #0b1115;
-  background: linear-gradient(180deg,#f5fbff 0%, #ffffff 40%);
-  line-height: 1.4;
-  padding-top: var(--nav-height); /* prevents navbar from covering top content on desktop */
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #ffe4ec; /* soft pink background */
+  color: #000;
+  padding-top: 70px;
 }
 
-/* center pages */
-.container{
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: var(--page-padding);
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* ---------- NAVBAR ---------- */
-.navbar{
+/* ====== Navbar ====== */
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: var(--nav-height);
-  background: var(--nav-bg);
-  color: white;
+  background: rgba(255, 255, 255, 0.6); /* transparent white background */
+  backdrop-filter: blur(10px); /* soft blur behind text */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 1rem 2rem;
   z-index: 1000;
-  gap: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-/* title with small pseudo decoration using ::after */
-.nav-title{
-  display:flex;
-  align-items:center;
-  gap: 0.5rem;
-  font-weight:700;
-  letter-spacing:0.4px;
+.nav-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  transition: font-size 0.3s ease;
 }
-.nav-title::after{
-  content: "";
-  display:inline-block;
+
+.nav-logo {
   width: 34px;
-  height: 6px;
-  background: var(--accent);
-  border-radius: 4px;
-  margin-left: 6px;
+  height: 34px;
+  border-radius: 6px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  transition: gap 0.3s ease;
+}
+
+.nav-links a {
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  background: rgba(193, 72, 72, 0.05);
+  transform: scale(1.05);
+}
+
+.nav-links a.active {
+  background: #fb6f92;
+  color: #fff;
+  font-weight: 600;
+}
+
+
+/* ====== Responsive Navbar Shrink ====== */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .nav-title {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    gap: 0.75rem;
+  }
+
+  .nav-links a {
+    padding: 5px 8px;
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ====== Responsive Navbar Shrink ====== */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .nav-title {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    gap: 0.75rem;
+  }
+
+  .nav-links a {
+    padding: 5px 8px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+
+    /* Move to bottom on mobile */
+    top: auto;
+    bottom: 0;
+
+    transition: all 0.4s ease;
+  }
+
+  body {
+    padding-top: 0; /* remove top padding */
+    padding-bottom: 70px; /* prevent content from hiding behind bottom navbar */
+  }
+
+  .nav-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+}
+
+/* ====== Layout & containers ====== */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* ====== Buttons ====== */
+button,
+.btn {
+  background-color: #2ec4b6; /* green accent */
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #249a8e;
   transform: translateY(-2px);
 }
 
-/* nav links as a row */
-.nav-links{
-  list-style:none;
-  display:flex;
-  gap: 0.5rem;
-  margin:0;
-  padding:0;
-  align-items:center;
-}
-.nav-links li:first-child a{ /* pseudo-class :first-child used */
-  transform: translateY(0);
-}
-.nav-links a{
-  color: white;
-  text-decoration:none;
-  padding: 8px 10px;
-  display:inline-block;
-  border-radius:6px;
-  transition: transform .18s ease, background .18s ease;
-}
-.nav-links a:hover{ /* pseudo-class */
-  transform: translateY(-3px) scale(1.02);
-  background: rgba(255,255,255,0.03);
-}
-
-/* active link highlight - set class="active" in the page's navbar */
-.nav-links a.active{
-  color: var(--accent);
-  border-bottom: 3px solid rgba(31,182,255,0.25);
-  font-weight:700;
-}
-
-/* small logo image */
-.nav-logo{
-  width:34px;
-  height:34px;
-  border-radius:6px;
-  object-fit:cover;
-  display:inline-block;
-  border: 1px solid rgba(255,255,255,0.06);
-}
-
-/* ---------- header/page title ---------- */
-.page-header{
-  margin-top: 0.75rem;
-  margin-bottom: 1rem;
-  display:flex;
-  align-items:center;
+/* ====== Forms ====== */
+form {
+  max-width: 400px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
-}
-.page-header h1{
-  margin:0;
-  font-size:1.5rem;
+  text-align: left;
 }
 
-/* ---------- card / hero ---------- */
-.hero{
-  background: linear-gradient(180deg, rgba(31,182,255,0.08), rgba(255,255,255,0.02));
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 6px 18px rgba(6,6,20,0.06);
-}
-
-/* ---------- game selection list ---------- */
-.game-list{
-  list-style:none;
-  padding:0;
-  margin:0;
-  display:grid;
-  gap:0.8rem;
-}
-.game-item{
-  background: white;
-  padding: 0.9rem;
-  border-radius:10px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow: 0 3px 10px rgba(11,17,21,0.04);
-  transition: transform .15s ease;
-}
-.game-item:hover{ transform: translateY(-3px); }
-.game-meta{ color: var(--muted); font-size:0.95rem; }
-
-/* ---------- boards (9x9 & 6x6) ---------- */
-.board{
-  display:grid;
-  gap: var(--board-gap);
-  background: #0b2333;
-  padding: var(--board-gap);
-  border-radius: 8px;
-  width: min(100%, 540px);
-}
-.board input{
-  width:100%;
-  height:48px;
-  border: none;
-  text-align: center;
-  font-size: 1rem;
-  background: white;
-  border-radius: 4px;
-  outline: none;
-  transition: transform .12s ease, box-shadow .12s ease;
-}
-.board input:focus{ transform: scale(1.02); box-shadow: 0 6px 14px rgba(31,182,255,0.12); }
-
-.board-9{ grid-template-columns: repeat(9, 1fr); }
-.board-6{ grid-template-columns: repeat(6, 1fr); }
-
-/* thicker borders for subgrids using nth-child */
-.board-9 input{
-  box-shadow: none;
-  padding:0;
-  line-height: 48px;
-  font-weight:600;
-  font-size: 1rem;
-}
-/* Use borders to show 3x3 subgrids (9x9) */
-.board-9 input{
-  border: 1px solid rgba(11,17,21,0.07);
-}
-.board-9 input:nth-child(3n){
-  border-right: 3px solid rgba(11,17,21,0.14);
-}
-.board-9 input:nth-child(n+19):nth-child(-n+27),
-.board-9 input:nth-child(n+46):nth-child(-n+54){
-  /* inner horizontal heavier lines to outline subgrid rows */
-  border-bottom: 3px solid rgba(11,17,21,0.14);
-}
-
-/* 6x6 subgrids (3x2 blocks) */
-.board-6 input{
-  border: 1px solid rgba(11,17,21,0.07);
-}
-.board-6 input:nth-child(3n){
-  border-right: 3px solid rgba(11,17,21,0.14);
-}
-.board-6 input:nth-child(n+13):nth-child(-n+18){
-  border-bottom: 3px solid rgba(11,17,21,0.14);
-}
-
-/* ---------- timer and controls ---------- */
-.controls{
-  display:flex;
-  gap:0.6rem;
-  align-items:center;
-  margin-top:0.8rem;
-}
-.timer{
-  background: rgba(15,23,36,0.06);
-  padding: 0.5rem 0.8rem;
-  border-radius: 8px;
-  font-weight:700;
-  color: #052033;
-}
-
-/* buttons */
-.btn{
-  border: none;
-  background: var(--accent);
-  color: white;
-  padding: 0.6rem 0.9rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform .12s ease, box-shadow .12s ease;
-}
-.btn:hover{ transform: translateY(-3px) scale(1.01); box-shadow: 0 8px 18px rgba(31,182,255,0.14); }
-
-/* ---------- rules / credit list ---------- */
-.rules-list{ margin:1rem 0; padding-left:1.1rem; }
-
-/* credits area with icons (fake links) */
-.credits a{ color: var(--accent); text-decoration:none; display:inline-flex; gap:0.5rem; align-items:center; }
-
-/* ---------- highscores table ---------- */
-.score-table{ width:100%; border-collapse: collapse; }
-.score-table th, .score-table td{
-  padding: 0.6rem 0.8rem;
-  text-align:left;
-  border-bottom: 1px solid rgba(11,17,21,0.04);
-}
-.rank{ font-weight:700; }
-
-/* ---------- forms (login/register) ---------- */
-.form{
-  background: white;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(6,6,20,0.04);
-  max-width:440px;
-}
-.form label{ display:block; margin-bottom:6px; font-weight:600; }
-.form input[type="text"], .form input[type="password"]{
-  width:100%;
+input {
   padding: 0.6rem;
-  margin-bottom:0.9rem;
-  border-radius:8px;
-  border: 1px solid rgba(11,17,21,0.06);
+  border: 2px solid #00b4d8;
+  border-radius: 6px;
+  font-size: 1rem;
 }
-.form .submit-row{ display:flex; gap:0.6rem; align-items:center; justify-content:flex-end; }
 
-/* ---------- responsive: mobile tweaks ---------- */
-@media (max-width: 600px){
-  body{ padding-top: 0; padding-bottom: var(--nav-height); } /* desktop top padding removed; bottom padding added so bottom nav doesn't cover */
-  .navbar{
-    top: auto;
-    bottom: 0;              /* move navbar to bottom on mobile */
-    height: 56px;
-    padding: 0 0.6rem;
-    justify-content: space-around;
-    background: linear-gradient(0deg, rgba(15,23,36,0.98), rgba(15,23,36,0.98));
+input:focus {
+  outline: none;
+  border-color: #2ec4b6;
+}
+
+/* ====== Tables (for High Scores) ====== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid #00b4d8;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+th {
+  background-color: #2ec4b6;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #e0f7fa;
+}
+
+/* ====== Game grids ====== */
+.grid {
+  display: grid;
+  gap: 2px;
+  margin: 1rem auto;
+}
+
+.grid-9x9 {
+  grid-template-columns: repeat(9, 1fr);
+  width: 360px;
+}
+
+.grid-6x6 {
+  grid-template-columns: repeat(6, 1fr);
+  width: 300px;
+}
+
+.grid input {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.grid input:hover {
+  transform: scale(1.05);
+  border-color: #2ec4b6;
+}
+
+/* Subgrid borders for Sudoku look */
+.grid-9x9 input:nth-child(3n) {
+  border-right: 2px solid #2ec4b6;
+}
+.grid-9x9 input:nth-child(n + 19):nth-child(-n + 27),
+.grid-9x9 input:nth-child(n + 46):nth-child(-n + 54) {
+  border-bottom: 2px solid #2ec4b6;
+}
+
+.grid-6x6 input:nth-child(3n) {
+  border-right: 2px solid #2ec4b6;
+}
+.grid-6x6 input:nth-child(n + 13):nth-child(-n + 18) {
+  border-bottom: 2px solid #2ec4b6;
+}
+
+/* ====== Responsive design ====== */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
   }
-  .nav-title{ display:none; } /* save space */
-  .nav-links{ gap: 0.2rem; }
-  .nav-links a{ padding: 6px 8px; font-size: 0.9rem; }
-  .container{ padding: 1rem 0.8rem; }
-  .board input{ height: 42px; font-size:0.95rem; }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .grid-9x9 {
+    width: 90vw;
+  }
+
+  .grid-6x6 {
+    width: 80vw;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 0.9rem;
+  }
 }
 
-/* utility */
-.small{ font-size:0.95rem; color:var(--muted); }
+/* ====== Footer (optional) ====== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
